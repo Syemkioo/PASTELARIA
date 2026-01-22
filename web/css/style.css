@@ -1,0 +1,398 @@
+
+
+/* === CONFIGURAÇÕES GERAIS === */
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background-color: #000; /* Fundo preto */
+    color: #6E00B3; /* Letras roxo */
+    transition: background-color 0.3s ease;
+    
+}
+
+.sidebar {
+    width: 100%;
+    height: 60px; /* Altura fixa para a barra horizontal */
+    background-color: #6E00B3;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 20px; /* Ajuste de padding para barra horizontal */
+    display: flex;
+    flex-direction: row; /* Muda para horizontal */
+    align-items: center; /* Centraliza verticalmente os itens */
+    justify-content: space-between; /* Espaça os itens */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+.sidebar h2 {
+    text-align: left; /* Ajuste para barra horizontal */
+    margin: 0 20px 0 0; /* Remove margem inferior, adiciona margem direita */
+    font-weight: 600;
+    letter-spacing: 1px;
+    flex-shrink: 0; /* Evita que o título encolha */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: auto; /* Ajuste para flex */
+    display: flex; /* Torna a lista horizontal */
+    flex-direction: row; /* Itens lado a lado */
+    gap: 10px; /* Espaçamento entre itens */
+}
+
+.sidebar ul li {
+    margin: 0; /* Remove margem vertical */
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 8px 14px; /* Ajuste de padding para barra */
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+/* Efeito hover e ativo */
+.sidebar ul li a:hover {
+    background-color: #9B33FF;
+    transform: translateY(-2px); /* Muda para cima em vez de lado */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.sidebar ul li a.active {
+    background-color: #00B36E;
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
+}
+
+/* === CONTEÚDO PRINCIPAL === */
+.content {
+    margin-left: 250px;
+    padding: 40px 50px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.content h1 {
+    font-weight: 700;
+    color: #6E00B3; /* Ajustado para roxo */
+    margin-bottom: 15px;
+    margin-top: 75px
+}
+
+.content p {
+    font-size: 1.1rem;
+    color: #fa8fb1;
+}
+
+/* === IMAGEM PRINCIPAL === */
+.home-img {
+    width: 300px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+/* === TABELA DO CARDÁPIO === */
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.menu-table th, .menu-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.menu-table th {
+    background-color: #f9f9f9;
+    color: #333;
+    font-weight: 600;
+}
+
+/* === FORMULÁRIO DE PEDIDO === */
+.pedido-form {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.pedido-form label {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.pedido-form input,
+.pedido-form select,
+.pedido-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease;
+}
+
+.pedido-form input:focus,
+.pedido-form select:focus,
+.pedido-form textarea:focus {
+    outline: none;
+    border-color: #e67e22;
+    box-shadow: 0 0 5px rgba(230, 126, 34, 0.4);
+}
+
+.pedido-form button {
+    margin-top: 18px;
+    background-color: #d35400;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pedido-form button:hover {
+    background-color: #e67e22;
+    transform: scale(1.03);
+}
+
+/* === CARDS DE PRODUTOS === */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding-bottom: 15px;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 10px 0 5px;
+    color: #d35400;
+    font-weight: 600;
+}
+
+.card p {
+    color: #555;
+    padding: 0 15px;
+    font-size: 14px;
+    min-height: 40px;
+}
+
+.price {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #27ae60;
+    font-size: 16px;
+}
+
+.card button {
+    background-color: #d35400;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card button:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+        box-shadow: none;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .home-img {
+        width: 250px;
+    }
+}
+
+/* === CABEÇALHO SUPERIOR (título + botão) === */
+.header-top {
+    display: flex;
+    justify-content: space-between; /* separa o título e o botão */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo do botão de login no topo */
+.btn-login-top {
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 6px; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: fixed; /* Fixa o botão na tela */
+    top: 80px; /* Um pouco mais pra baixo da barra horizontal (que tem 60px de altura + margem) */
+    left: 20px; /* Do lado esquerdo */
+    z-index: 1001; /* Garante que fique acima da barra e outros elementos */
+}
+
+.btn-login-top:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+
+.btn-login-top i {
+    font-size: 18px;
+}
+
+/* === FORMULÁRIOS (login e cadastro) === */
+.form-container {
+    max-width: 450px;
+    margin: 80px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.form-container h1 {
+    color: #d35400;
+    margin-bottom: 15px;
+}
+
+.form-container p {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.form-cadastro label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+.form-cadastro input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.form-cadastro input:focus {
+    border-color: #d35400;
+    outline: none;
+}
+
+/* Botão principal */
+.btn-enviar {
+    width: 100%;
+    background-color: #d35400;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #e67e22;
+    transform: scale(1.03);
+}
+
+/* Link para login */
+.link-login {
+    margin-top: 15px;
+    font-size: 14px;
+}
+.link-login a {
+    color: #d35400;
+    text-decoration: none;
+    font-weight: bold;
+}
+.link-login a:hover {
+    text-decoration: underline;
+}
+
+#pretogeral {
+   background-color: whitesmoke;
+   
+}
+
+#rojo {
+    color: purple;
+}
+
+#ata {
+    background-color: purple;
+}
+

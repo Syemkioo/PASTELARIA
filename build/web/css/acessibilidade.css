@@ -1,0 +1,88 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 15 de out. de 2025, 21:35:40
+    Author     : 11192
+*/
+
+/* =======================
+   ACESSIBILIDADE - PASTELARIA CHINA
+   ======================= */
+
+/* ===== AJUSTES DO VLibras ===== */
+[vw] {
+    position: fixed !important;
+    right: 15px !important;
+    bottom: 15px !important;
+    z-index: 9999 !important;
+}
+
+[vw-access-button] {
+    border-radius: 50% !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+[vw-access-button] > img {
+    width: 48px !important;
+    height: 48px !important;
+}
+
+/* ===== BOTÃO DE CONTRASTE ===== */
+.contrast-toggle {
+    position: fixed;
+    bottom: 80px;
+    right: 15px;
+    z-index: 9998;
+    background-color: #d35400;
+    color: greenyellow;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+}
+
+.contrast-toggle:hover {
+    background-color: #a84300;
+}
+
+/* ===== TEMA DE ALTO CONTRASTE ===== */
+body.high-contrast {
+    background-color: #000 !important;
+    color: #00ff00 !important; /* Mudado para verde */
+}
+
+body.high-contrast a,
+body.high-contrast p,
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3 {
+    color: #00ff00 !important; /* Mudado para verde */
+}
+
+body.high-contrast .sidebar {
+    background-color: #111 !important;
+    color: #00ff00 !important; /* Mudado para verde */
+}
+
+body.high-contrast .sidebar a {
+    color: #00ff00 !important; /* Mudado para verde */
+}
+
+body.high-contrast .sidebar a.active {
+    background-color: #ff9800 !important;
+}
+
+body.high-contrast .btn-login-top {
+    background-color: #ff9800 !important;
+    color: #000 !important;
+}
+
+body.high-contrast .btn-login-top:hover {
+    background-color: #ffcc80 !important;
+}

@@ -1,0 +1,3 @@
+controller.CarrinhoServlet=javax.servlet.annotation.WebServlet
+controller.FinalizarPedidoServlet=javax.servlet.annotation.WebServlet
+controller.PedidoServlet=javax.servlet.annotation.WebServlet
